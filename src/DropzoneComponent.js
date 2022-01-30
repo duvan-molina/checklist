@@ -6,7 +6,7 @@ function Uploader() {
   const [ids, setIds] = React.useState([]);
 
   const { getRootProps, getInputProps } = useDropzone({
-    multiple: false,
+    multiple: true,
     onDrop: React.useCallback((acceptedFiles) => {
       const newFiles = acceptedFiles.map((file) =>
         // Si se llama una API para subir el archivo, se hace el request aquí
